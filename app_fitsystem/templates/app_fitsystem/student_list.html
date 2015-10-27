@@ -4,12 +4,12 @@
     </head>
     <body>
         <div>
-            <h1><a href="">Students</a></h1>
-        </div>
-
-        <div>
-            <p>Payment: 14.06.2014, 12:14</p>
-            <p>Name: Teste</p>
+        	{% for student in students %}
+			    <div>
+			        <p>payment: {{ student.payment_date }}</p>
+			        <h1><a href="">{{ student.name }}</a></h1>
+			    </div>
+			{% endfor %}
         </div>
     </body>
 </html>
